@@ -2,6 +2,7 @@
 var form = document.getElementById("addForm");
 var itemList = document.getElementById("items");
 var filter = document.getElementById("filter");
+const deleteItem = document.getElementById("delete");
 
 // event listeners
 
@@ -53,7 +54,10 @@ function addItem(e) {
 }
 
 //remove item
-function removeItem(e) {}
+function removeItem(e) {
+  const delItem = e.target;
+  itemList.removeChild(delItem.parentElement);
+}
 
 //filter items
 function filterItems(e) {
